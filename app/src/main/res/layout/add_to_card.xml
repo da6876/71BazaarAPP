@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    style="@style/Platform.MaterialComponents"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Widget.MaterialComponents.TextView"
+                    android:id="@+id/tv_tolet_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="15dp" />
+
+                <ImageButton
+                    android:id="@+id/editBtn_Edit"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_edit"
+                    android:visibility="gone"
+                    android:tint="@android:color/white" />
+                <ImageButton
+                    android:id="@+id/editBtn_cancle"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_cancel"
+                    android:tint="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/Platform.MaterialComponents"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <LinearLayout
+                    android:id="@+id/profileLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_Product_name"
+                        style="@style/Widget.MaterialComponents.TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:text="Tolet Type Name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_marginLeft="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+
+                            <TextView
+                                style="@style/Widget.MaterialComponents.TextView"
+                                android:id="@+id/tv_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5000"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                            <TextView
+                                style="@style/Widget.MaterialComponents.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Price"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginStart="10dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp">
+
+
+                                <TextView
+                                    style="@style/Widget.MaterialComponents.TextView"
+                                    android:id="@+id/tv_Bath"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Quantity"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginStart="10dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp">
+
+
+                                <EditText
+                                    style="@style/Widget.MaterialComponents.TextView"
+                                    android:id="@+id/tv_Quantity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:inputType="number"
+                                    android:minLines="1"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="?attr/actionBarSize"
+                                android:layout_marginStart="10dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginLeft="10dp">
+
+
+                                <TextView
+                                    style="@style/Widget.MaterialComponents.TextView"
+                                    android:id="@+id/tv_Total"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                                <TextView
+                                    style="@style/Widget.MaterialComponents.TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Tk"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e6e6e6" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_AddTOCardContinew"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Cotinue"/>
+
+                <View
+                    android:id="@+id/extraSpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPage"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"
+                    android:layout_height="150dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#E3F2FF"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Categories"
+                        android:textColor="@color/colorPrimary"
+                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                        android:drawablePadding="20dp"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerviewCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scrollbars="horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!--android:text="Featured Products"-->
+                    <TextView
+                        android:id="@+id/tvBrands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Brand Products"
+                        android:textColor="@color/colorPrimary"
+                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerviewFeaturedProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scrollbars="horizontal" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="60dp">
+
+                    <TextView
+                        android:id="@+id/tvProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Top Product"
+                        android:textColor="@color/colorPrimary"
+                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerviewTopProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scrollbars="horizontal" />
+
+                    <TextView
+                        android:id="@+id/tvSeeMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="See More"
+                        android:textAlignment="center"
+                        android:background="@color/colorBG"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</FrameLayout>
